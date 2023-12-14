@@ -9,7 +9,7 @@ class ErrorWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text("Error")
+        Text("Hello World!")
       ],
     );
   }
