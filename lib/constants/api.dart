@@ -2,5 +2,8 @@
 
 
 class  Api{
-  static String mealCatagory = 'https://www.themealdb.com/api/json/v1/1/categories.php';
+  static String baseUrl = 'https://www.themealdb.com/api/json/v1/1';
+  static String mealCategory = '$baseUrl/categories.php';
+  static String getCategory = '$baseUrl/filter.php?c=';
+  static String getRecipe = '$baseUrl/lookup.php?i=';
 }
