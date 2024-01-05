@@ -1,99 +1,115 @@
+// //
+// // class Bank {
+// //   final String name;
+// //   final int open;
+// //
+// //   Bank({required this.name, required this.open});
+// //
+// //
+// //   factory Bank.formJson(Map<String, dynamic> json){
+// //     return Bank(name: json['name'], open: json['open']);
+// //   }
+// //
+// // }
+// //
+// // final List banks = [
+// //   {
+// //     'name' : "GBIME",
+// //     'open' : 2022
+// //   },
+// //   {
+// //     'name' : "NIBL",
+// //     'open' : 2023,
+// //   },
+// //
+// // ];
+// //
+// // final bankInstances = banks.map((e) => Bank.formJson(e)).toList();
 //
-// class Bank {
-//   final String name;
-//   final int open;
+// class MealCategory {
+//   final String idCategory;
+//   final String strCategory;
+//   final String strCategoryThumb;
+//   final String strCategoryDescription;
 //
-//   Bank({required this.name, required this.open});
+//   MealCategory({
+//     required this.idCategory,
+//     required this.strCategory,
+//     required this.strCategoryThumb,
+//     required this.strCategoryDescription,
+//   });
 //
-//
-//   factory Bank.formJson(Map<String, dynamic> json){
-//     return Bank(name: json['name'], open: json['open']);
+//   factory MealCategory.fromJson(Map<String, dynamic> json) {
+//     return MealCategory(
+//       idCategory: json['idCategory'],
+//       strCategory: json['strCategory'],
+//       strCategoryThumb: json['strCategoryThumb'],
+//       strCategoryDescription: json['strCategoryDescription'],
+//     );
 //   }
-//
 // }
 //
-// final List banks = [
-//   {
-//     'name' : "GBIME",
-//     'open' : 2022
-//   },
-//   {
-//     'name' : "NIBL",
-//     'open' : 2023,
-//   },
+// class MealItem {
+//   final String strMeal;
+//   final String strMealThumb;
+//   final String idMeal;
 //
-// ];
+//   MealItem(
+//       {required this.strMeal,
+//       required this.strMealThumb,
+//       required this.idMeal});
 //
-// final bankInstances = banks.map((e) => Bank.formJson(e)).toList();
+//   factory MealItem.fromJson(Map<String, dynamic> json) {
+//     return MealItem(
+//       strMeal: json['strMeal'],
+//       strMealThumb: json['strMealThumb'],
+//       idMeal: json['idMeal'],
+//     );
+//   }
+// }
+//
+// class Recipe {
+//   final String strMeal;
+//   final String strCategory;
+//   final String strArea;
+//   final String strInstructions;
+//   final String strMealThumb;
+//   final String strTags;
+//   final String strYoutube;
+//
+//   Recipe(
+//       {required this.strMeal,
+//       required this.strCategory,
+//       required this.strArea,
+//       required this.strInstructions,
+//       required this.strMealThumb,
+//       required this.strTags,
+//       required this.strYoutube});
+//
+//   factory Recipe.fromJson(Map<String, dynamic> json) {
+//     return Recipe(
+//         strMeal: json['strMeal'],
+//         strCategory: json['strCategory'],
+//         strArea: json['strArea'],
+//         strInstructions: json['strInstructions'],
+//         strMealThumb: json['strMealThumb'],
+//         strTags: json['strTags'],
+//         strYoutube: json['strYoutube']);
+//   }
+// }
 
-class MealCategory {
-  final String idCategory;
-  final String strCategory;
-  final String strCategoryThumb;
-  final String strCategoryDescription;
+class Post {
+  final int id;
+  final String title;
+  final String body;
 
-  MealCategory({
-    required this.idCategory,
-    required this.strCategory,
-    required this.strCategoryThumb,
-    required this.strCategoryDescription,
-  });
+  Post({required this.id, required this.title, required this.body});
 
-  factory MealCategory.fromJson(Map<String, dynamic> json) {
-    return MealCategory(
-      idCategory: json['idCategory'],
-      strCategory: json['strCategory'],
-      strCategoryThumb: json['strCategoryThumb'],
-      strCategoryDescription: json['strCategoryDescription'],
+  factory Post.fromJson(Map<String, dynamic> json) {
+    return Post(
+      id: json['id'],
+      title: json['title'],
+      body: json['body'],
     );
-  }
-}
-
-class MealItem {
-  final String strMeal;
-  final String strMealThumb;
-  final String idMeal;
-
-  MealItem(
-      {required this.strMeal,
-      required this.strMealThumb,
-      required this.idMeal});
-
-  factory MealItem.fromJson(Map<String, dynamic> json) {
-    return MealItem(
-      strMeal: json['strMeal'],
-      strMealThumb: json['strMealThumb'],
-      idMeal: json['idMeal'],
-    );
-  }
-}
-
-class Recipe {
-  final String strMeal;
-  final String strCategory;
-  final String strArea;
-  final String strInstructions;
-  final String strMealThumb;
-  final String strTags;
-  final String strYoutube;
-
-  Recipe(
-      {required this.strMeal,
-      required this.strCategory,
-      required this.strArea,
-      required this.strInstructions,
-      required this.strMealThumb,
-      required this.strTags,
-      required this.strYoutube});
-
-  factory Recipe.fromJson(Map<String, dynamic> json) {
-    return Recipe(
-        strMeal: json['strMeal'],
-        strCategory: json['strCategory'],
-        strArea: json['strArea'],
-        strInstructions: json['strInstructions'],
-        strMealThumb: json['strMealThumb'],
-        strTags: json['strTags'],
-        strYoutube: json['strYoutube']);
   }
 }

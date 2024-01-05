@@ -1,22 +1,25 @@
-import 'package:ecommerce/views/home_page.dart';
+import 'package:ecommerce/pages/welcome/welcome.dart';
+import 'package:ecommerce/views/login_page.dart';
+import 'package:ecommerce/views/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:get/get.dart';
 
-void main () => runApp(const ProviderScope(child: Home(),),);
+void main() {
+  runApp(ProviderScope(child: MyApp()));
 
-class Home extends StatelessWidget {
-  const Home({super.key});
+}
 
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
-    return GetMaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'My App',
       theme: ThemeData(
-        useMaterial3: true
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const SignUpPage(),
     );
   }
 }
